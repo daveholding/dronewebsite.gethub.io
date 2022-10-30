@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DES</title>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5iHZiuPIqj66kw90gQ60umEG4zNKKeGEXqw&usqp=CAU">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+/* .header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+} */
+
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: transparent;
+  align-items: top;
+  padding: 5px;
+}
+
+.navbar p {
+  /* display: flex; */
+  color: transparent;
+}
+
+.navbar h1 {
+  /* display: flex; */
+  color: rgb(7, 7, 7);
+  padding: 8.7px 40px;
+  text-decoration: none;
+  text-align: center;
+  font-size: clamp(.2rem, 1.5vw, 1rem);
+  font-family: "Papyrus","Courier New", sans-serif;
+
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: rgb(7, 7, 7);
+  padding: 20px 40px;
+  text-decoration: none;
+  text-align: center;
+  font-size: clamp(.2rem, 1.5vw, 1rem);
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgba(3, 1, 1, 0.207);
+  color: rgb(240, 80, 32);
+}
+
+/* LOGO */
+
+.fakeimg1{
+  height: 8px;
+  width: 8px;
+  display: block;
+  margin-left: 3%;
+  margin-right: 90%;
+}
+/* LOGO */
+.fakeimg2{
+  height: 60px;
+  width:60px;
+  display: flex;
+  align-items: right;
+  margin-top: -4rem;
+  
+} 
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f4f5fbfd;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: rgb(244, 244, 247);
+  padding: 0px;
+}
+
+/* Fake image, just for this example */
+/* .fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+} */
+.fakeimg1{
+  height: 35%;
+  width:100%;
+  /* display: block; */
+  margin-left: left;
+  /* margin-right: auto; */
+  padding-right: 20px;
+}
+.fakeimg2{
+  height: 23%;
+  width:100%;
+  /* display: block; */
+  margin-left: left;
+  /* margin-right: auto; */
+  padding-top: 65px;
+  padding-bottom: 10px;
+
+}
+.fakeimg3{
+  height: 35%;
+  width:100%;
+  /* display: block; */
+  margin-left: left;
+  /* margin-right: auto; */
+  
+}
+.fakeimg4{
+  height: 13%;
+  width:100%;
+  /* display: block; */
+  margin-left: left;
+  /* margin-right: auto; */
+  padding: 20px;
+}
+.fakeimg5{
+  height: 39%;
+  width:80%;
+  /* display: block; */
+  margin-left: left;
+  /* margin-right: auto; */
+  padding: 12px;
+}
+.fakeimg6{
+  height: 41%;
+  width:50%;
+  /* display: block; */
+  
+  /* margin-right: auto; */
+  padding: 12px;
+}
+/* Background pic */
+body {
+  background-image: url('../images/background4.jpeg');
+height: 100%;
+width: 100%;
+}
+.footer {
+  padding: 10px;
+  align-items: center;
+  /* background: #ddd; */
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="navbar">
+  <p>space space space</p>
+  <h1>DRONES EYE STUDIO</h1>
+  <a href="index.html">Home</a>
+  <a href="Photography.html">Photography</a>
+  <a href="Videography.html">Videography</a>
+  <a href="about.html">About</a>
+</div>
+<!-- <div class="fakeimg1">
+  <img class="fakeimg2" src="https://lh3.googleusercontent.com/2wv8SNW_E4d9GiPTEG5vvVqztFp7_4IuGbH7U6w3WtUZd2TqWCtY1x6jGIgOblckzsmfozZMEm5hcgfE0t_mLbMJTN5wrIBWvNP8Go46TDTCD-MOT0NTbM_mP1f6ItDaoL7Gm-N36R6Dew158aov6X9XocfyNXvUYTkjzIFAeRieoMdzwVzxLz_9wcOrHMuES6aETziZUDLPXY85ymrlcq2VjRGD2OdY8enmJTqhNLFJkQQSbxkQrgKRNR0feDMiEjjBd6OhZPxQ0mAEsl-yU-lLf21Gb2tpEidGJURAUDoXmbnJ9PZFBQYzzBLOIL_nPACk5bYQQWC8MqGqI5p9rC3Vz5lVv93LUGq5vqRw7yqEYRPnj74A68OT6oPAtwPad-nElstqiLu6JtuNpISuGEr3mCxrxzrt_Zd-rkG6pV15YPPuwrrQ0T1WWpnIRrBxISEwnHYsFpo3AJOlJSWfK8YbEwtcEAa2ILlcBzOMnG5ZPGb4J2-jcAdW0EaAbCsqyc1a7oUbTKmowzZmyqzgFBExB5N8oSwU8mUgYeFbBC52Kmwz40_6k5ZRVzsxc6iGbn2Qf_DbFM-pH8OYdbkF9PprIUGId1bcIAsXu8wjlLIeneutxyooyfArCrgkWQLWWCHjaeCiigpnNi7NgvQngtlEWOfoDR6TKdB0mAMDw9W306lCnAI7Ay72VT7NBevIyIdzrhq6JRPH1_sLLc8UCQPGZ7qCOhAmL1jFDffzImz2oFW7oJ1rnaCGPGH-SKo7kD91p78pGihquAdvWSXKol3cyk7I-mid9temzrOUeH9AD4GYYaLnTTALlUoSKXPF6KwzDzL2vlE_DtYnX2NNjtTw3OzbZndSjJIBLwkYYfXKSBFJQcEEg3HArZ1tGoUpjpFczE229WBhiWbLHDImg9pwQwK9pPDvFR1u982aqlubrK4L=s361-no?authuser=0" 
+  alt="logo">
+</div> -->
+<!-- Header -->
+<div class="header">
+  <!-- <h1>My Website</h1>
+  <p>With a <b>flexible</b> layout.</p> -->
+</div>
+
+
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>David Holding</h2>
+    <h5>A simple Biography:</h5>
+    <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+    <img class="fakeimg1" src="https://lh3.googleusercontent.com/txPAahKxNC5DM1r2LzwVsdeNUNX3q53eJ3lEmd0Jxbnm1HOUAbEwyB7QBvLONxlcqWhTOoTzS8xzr9Xtu3hHgHhma-dW4Pk_Vroo95UHmit-bcjVNUAfagwHiGxd42DGcLsJ-izv7OGV8GYrL-ohvTnR4FuVXmCdyYLaFIQ_zznF3eq7hlodH1rSv5s_h-8i8crDhG3SEDgR2xxULdGl2ksQ1IXWfbW3COREOs4JV0b0MT_DKoEGx-IC3wi3YcXm-9Uuxz1Mof9_mRZieEVIqqZ6qC-BCbcrfxQ8a77B6ZQ9U0wHiDJVj5mQxKwM6lONqVyK-Z9FAkcqJ-3wgStQsOag6RKhv9kBfF9eYOyRPcF7cNRJSFyp-vy_Kfzk4PJcWlmaH3xt7ZtqwNYiR2VJlhTpvOwkqROz3N0zi4o8oNpixO8edDd55PIWUY8kGKHwQGizqbTEboWUsE6-qywBXg29tkWzXPm9oVYKWVmdzj6FdG2TTYIsCD_CNSHyxE2OKONtVWMKHLgpJpIFyEcdlvqm8Z1TVUKULArBGTX3nx8PP-CqmPY4hwfBrMLKOqQXwhEt7u2r5VUq0HQXu2MEYlmBMyOmH83fsjBishFBzZS4D_rY3VMX3F8NweRSCRyjKMFkIps-BAKDYB2DEHd7huRbYCWcmtmWBw_tBejyUPtqaex4I2_w5Yo_fWGNDdJFuqK7XiFLX7rkXPJ7RVeDfBAKKzb3EVQrZAXUZtzAz2Q7OTysq08Fzu5y8aim1pBHDPx_iVVKBKe59juqxEhOPx1nhP21p-N8Oetm2gXYhjfodkdr4j6Sy6rRhOdGFUIECO7pWOHqKC_y2L5JzgK8VLHigreywZ5K_986aBYGixpm2SuxlCFRrosXDRSrTvDAsxeiIgBb6rcPBRNBZWtVgk6tiaKB_Tm6HMSSesPfow2qSL8k=w1514-h2018-no?authuser=0" 
+    alt="me">
+    <p>Born in Wyoming and raised in Utah, I have always had a passion for the outdoors and experiencing life with all its beauty.
+    As a tribute to the beautiful world Gods gave us I made this website to show off some of the spectacular shots I have taken over the years. </p>
+    <!-- <h3>more text</h3>
+    <p>Lorem ipsum dolor sit ame.</p> -->
+    <!-- <div class="fakeimg" style="height:60px;">Image</div><br> -->
+    <img class="fakeimg2" src="https://lh3.googleusercontent.com/98OY6yak1IQvx7e9BdxjH6TGwFSHAOd8ouKscWWp8X1lnAUkWuswya1TZemOK1yWc7BPrLD-xJg1VNyDvW7bgsdnU7zKLeq9-teKP3k3DPCHB9UsdSbNArL3GLHgfmNQvlQBmALOt-3-8SssNVT4pG3tyf0jfWTWp3MKjALgFCsvU3xlPBCuY7t9aOOvpTGUiI7tQQxvwJi3zwvf618zdowqhbgXMgUCEjclGTDc9nnQs73Zr6oVkiz4Kt3HZ03coNggRQZ2M8HGXFRJNyQr4lAz3rnsr_Or_C8ng9gO5znBhiqqv79PK9xaZ2U8LLz4T4cJX4gPrxGCI1LLUuzoFt0ItrDXSAejXlwNP-XP8RJbuOSJjPIPsO1TVdu2zdEZDsZz73VViu41RxlWv_aLEWkb2FPDvq1SfXdPR0FL5mkRemDhZaTTLtQQkh6jbgtsoCOjE2X8gSsdY6iBQXgkWTzAyVga_-NOyXETeY5HsJmml8x-3_bMpwnvZgVqdinRR5Ysr5bDfEd_Umv6bYzxSohclmpW6rKKlbx2LXwlQOtnO-hHdNMAhC6ekp1n5UBmD5o3VAelLB8UAao6c7C_CUcdTaLOOYLUFx06FSPaIrbR_li9ZYaIBp5eTSe8o5NlAcyMvD-C7RlZlgIVdFofAz8zIxgWE-x8IuD3rrdiDxpGToStyR4PIav5L4SlAHX8rOOH1axZ42eUOwe_cMdwHebidirdCa-xfBrXcCKwbr7aVMlcl5MbGXcFNmAgWAggRgPF8cBp0gCRvVFJWVKckPOCrvbbfbl2ZpAC6mEX4nVFsF_0GY03RQhde-5ielxbKPCtIhOQxZ3mbXxDN75ICoBFB-qRG4TKoZuwo960aXUMdVFEFVsiZ9NMcmT5-lgxiXAji98bGgG4nnJI5fWLjypMkkq522XQyY85ZSvKjvtwavnU=w2692-h2018-no?authuser=0" 
+    alt="me">
+    <!-- <div class="fakeimg" style="height:60px;">Image</div><br> -->
+    <img class="fakeimg3" src="https://lh3.googleusercontent.com/ttuvnX_peAUvl0FUL4XELetPj8xz4mIUPitjIWwvGVZb9uIHiWVv7rDjymCp-Ik26dX-TTU7E6q04yhWmRYFBFDOf31JG51i_NaNYU4N0UI_vdUbHZPvp7JCTKKW_eN6DppIn-V5ZiusAqHI3IXG9CNJVREQbbDCm13aKWyTT-jXb6YqCHIXs9kVYP0cw7l8P-kkP3JozgAUlbvK7CorUeTtwJ-Zs4b_CJjjS5wNd0rEeYjWdJ6Gr9z38lS1u03qv-lJdNTUqjgi1cp7QWrGNGfs0YhGAU3osD1rqw9J1emlMW60_B_fa5jVxFCPRMFZhmYvPTfU6fG7gNwMj3AF_iLNHgNPm2XtKdSya10IXoF-e8Z22qBGjl3fwLJtU_q6Imt6yNeMHeV2oFu5UoxV6fcXefbkcNC6QhtE6cRY9Kk5IzuKrQm-wDvPPodTxy2AsWupLHOO79QADQAcKtalHJAF1ryzE66XwsqnrPhKuVGGdof-g60N6f_v6W6PoZz5LGbZ8xsSd1oSTf7l5KVtHvvbCbQWwKgVeuNvKs_EXeDy1kxLG4q2McS_qkRQRqWCKrzQ0vLwVC2idRq4XCqWCgqI_oI7PDYUCxqdLx2wOAbH3fjoySl--a_AzKN6voNGOFvTAuzDXf1dFjqEmHwfg7eNOmMZTGF-HxIp38ezdZ--N7LKetMA3gyC7wWLUnPcNbgT7MfXj4LRLA72wa9DwcmAU43zT2HQSAxEpEQn9GpxplD6ZhiLkoH84fIgBg33FCAw8fjgOGVp_6g_hjjJcmdmAAuxJ0bDAn3NnVWKl4IY8Q6WTbgVhtt0Bl1rT1_vLo8xeq6ScA15irX130Egelwhst90_cpUittR7xS91LIt5SjBePGos8b_H4hOAb71mMiXzYd_kb7hU_x0FNPV4UfhmE3x0VFdbmD-7kuE2EtdSZ38=w1514-h2018-no?authuser=0" 
+    alt="me">
+    <!-- <div class="fakeimg" style="height:60px;">Image</div> -->
+    <!-- <img class="fakeimg4" src="https://lh3.googleusercontent.com/aP5uwFkymWmAU1wyTMVu_oxy1kqVy6lQUEJ6E_1cJjg1PHXlEq2FG18Cy-isYE7iS66KyHlmHzBmBTfqnLvXOdmVMVwr1dU3ZcajOaHzUnXYrZ-BotHH-wrXydty5Jb5p5d60Fe18BaXGemhOQGas-LBqs50ofxnWjmQYLs9MdMgXmRu1Kkq9YNVEVAdtvZ54XMnK1R0IsdMIvNgGNXZyBC6tgmbzWWb_t1O82e1ZbK30IGNST6y_7yTD_Q9i5lyrhEjm09besq_pbj7n5wAKqoBn4pqy1zutn1d9kRTGyVXMv7FbKvxOPj1-d2jojy9dqk100NSMnxW4PuXBCqep8QFUszXYN-wwzTYD4VI-7YDG3mn9ga9Dlv40QoF-M71emyUi25lYgk0iCCr43XNQ_KtWIRq78mgPZHG9Z40UXCipArz0KIw0dqU8u3ssr-V7bVJjMQb1l7dTgEFL1VA7M5wMJCteH1nJLf3UkLz2reLIfkfMMycNazEdihpJDwmsUnzckVVmcRUXFyn9HRnBNDPFtnEjUB45WUrTRbmoHf_lcjidmJBnh5pQYYIOulxC1yybbalhtfRLCw79Q-oaVr_diGKz36mppWaeCos0mFnRjjvF_R-SZSbI29Ayk6X7iGpqxaAg0sdcV2bB_tAW4qNQUGKdDzs-tEK4cdkejC6ngsnuXszhS4bpfCfGQCBzJtyb6YJhUpdccsjkcVniuT4hYVordZIJTtTmNrxPxoSSFTiIRLPjgR6aUu6wDZ5ZuAaQIF-cDPLR-s8Vn65ybTiQNjPfWSR9cFebp-vyX8h6_TnQTmYpnDg5NhZzfFjnxZMP7Nq8eD0PEu5N_3fHtkkJ0maMEweh7QCPhuZdelzwzIbN1gEctGibVfRkbwHu3-jMOShwzwFiXJnJfeyiCnQCGr2QQdqElhkRoGRS80ZCtAr=w533-h400-no?authuser=0" 
+    alt="me"> -->
+  </div>
+  <div class="main">
+    <h2>The Family</h2>
+    <h5>alwyas having another adventure Ft. Iceland</h5>
+    <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+    <img class="fakeimg5" src="https://lh3.googleusercontent.com/Qm0C7PLM60IGID7FGya8HITxa5OBT07YSN0O0vTAZBVUxaHg1uCIjce8N_TUV16iVWNTDAtelgy6mXDMU9fOClJjFeidh7KHqT3uc-U2MnMf5vm7nU0Kull_PZO9JyXhMAmh8TvtcXFSMLhaqRi75bvHQBke7Uni1jmPEc5LX9G7KkUxgxq8FvJf6_IPGqELsqRtsZqjcIKKQPSpdkNdELv8GuzFr1wmiCQvAfOk9SA5g9eXfB1EEIDnz6JI4dA75x0moWjpbwY9GGuLMf0sVIen1Kl59DyAmqe8eVD8ChC1338TBb61cRbY67uzg9SWPq8dc3laF2J0GqEHebYL96a8uYUXU0_m1IWNouxJu_3VtSLLf64RjFXVH2HthqhzjpSetuXLHOYpd3U-jiQtqRngzcy6Ufg7U3qOmBwdEeT7uShxErFvWPyeHD2WQdofoR9w9xJE2YcfhC_9NH3RJZ7yD7m_l3tdTdSx2fWiD_-jXatanB5sFDxUx0MRRoTqrfu153STWSr8JyQlmvY9zVAFYWB6IlsaZ7ldeZ8YVhAC23I6aSpC_Apn3S5Povpat4GPpMz6UXfAM3mcG0NUCg8N8ZyZd4E911CKbWUZCmNyjLwKPOL6J91NCTtSIoaaJNmNLkhhhnoj6vgIFW3VQElfprYy0ttjqPe4BvuPStbXuDGPNSUjRWyPWmmCGR7ugRwuz4DQBB5Oq75dR_J2EAFpCE0dYWRJOzzFjIdk77QiKeS8iTJC2c1eY4fxOY3F5T2sy8w-86Qt_keGjwgYLKTejEmQe66Xa-H7a3sVfFLNmY7-OKGjWIeIC1YjxpmaMv0jYQ3qQkBpx00ImfTHgeCvZdh0qgS1C57rpQntBJ6Vcw9c69cfKy5ObKIsyBgdP_CgHxNnkOEdxlNpwgRO-KU5Dmi80a8rPLZFgNWccpdOwsC-=w2049-h1536-no?authuser=0" 
+    alt="family">
+    <!-- <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+    <br>
+    <h2>My Dog Ranger</h2>
+    <h5>My trusty Companion</h5>
+    <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+    <img class="fakeimg6" src="https://lh3.googleusercontent.com/o-h8i8BKnWikPyeiQRbtHGkwxZk3nVw2UqjHDgycWEhW7_yL_zH5cQFh1-VB9isT0_DbnDO4i45WvjhMWaz_V-aP2xj3tg_Kwdv1kChVljmP8A3ccNoXVlgmPwcTV4xP1iLhZ80n3QLFVGlk5vwKanjjS4d0c_s9fyMzfPkdD_nDzonvRcAgStcSYHbmEkSVDGRxWOl8i1aVtRnQTbqgmwQe6SO-PcXVNqWKY9HEE2DO0XdIKDL8GnhQcjpcUnzHM2m4u8RsQsuQBRHa69GlsgQ5HHjd7cLwkHfVlKdCE769x7WFVaGSqMqJ7Pgqu3fiNS5q3wpdEjSOFbbbQgO8tvKjiQpmUw1dAnY13G2YJ6J5rW3HZZdLSXTgq-r1o3y_Ebw81CUE6pA6tv57yV-VqCz0hXnLcrq19gSmJiPpaFFqAyD_WiXdPkW0IRkPeMyDgCpUqJMvyURHH8YhkgUiY_f8o3B9NCTodVwZkblIIa3bKhNfNulfDSlusvoUUm8BrafPsZsZ6Qv9AIp1_7aoj4HXsqvFma8nLhiHY91L_p5pb2ga4tVFnT0Shc3lCYV6Pr6bI_dYv3Np-59e4UpEUmwG_pQtIGUAzpflKBvGY3qDU2-Y4-0biINLzrBRHd-nuOC-7WWX3jgOnSZdG53RU5F34y__X14pZUoDtMCKqxHyx8q2KBNwXtdMSurnX8yKZ7dea46pmwR97v4iU132DMFKhK5qbWTP0SCvSE9nSr4CRvzVYpseBZ2Hvje9BDVgeb6f8A6Az-JO7Wy1khhUpPt6ONH-fzjiEIerOSAiy613hbEI1qCGH2bN-k1hsR_ccottnU-QrXBVCPn58vXnZh2TF9Yo8MLmtRuLeTvQstqZfzPrC2cbKx9tG7azdASHNxbZBgmoAiS5hyNIAcQ4X36oY_2oNKnb6nAXrJsWQX54zFJE=w744-h1114-no?authuser=0" 
+    alt="pets">
+    <!-- <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p> Contact Me: </p>
+  <p>Phone: (801-541-8812)</p>
+  <p>Email: DavidHoldingPro@gmail.com</p>
+  <p>Linked In:www.linkedin.com/in/david-holding-30a23b221</p>
+
+</div>
+
+</body>
+</html>
+
+
